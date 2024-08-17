@@ -1,0 +1,1 @@
+# hotel-bed-show-case
