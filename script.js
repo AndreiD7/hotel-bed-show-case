@@ -4,6 +4,7 @@ let menu = document.querySelector("#menu");
 let navbar = document.querySelector(".navbar");
 
 menu.onclick = () => {
+  console.log("Menu clicked");
   menu.classList.toggle("fa-times");
   navbar.classList.toggle("active");
 };
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const scriptURL = config.apiURL;
-
 const form = document.forms["contact-form"];
 
 const sendText = document.getElementById("sendText");
