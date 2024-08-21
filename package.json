@@ -2,7 +2,6 @@
   "name": "krovati-dlya-gostinits-batumi",
   "version": "1.0.0",
   "description": "",
-  "main": "config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
