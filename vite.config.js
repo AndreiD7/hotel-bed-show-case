@@ -5,4 +5,5 @@ export default defineConfig({
   build: {
     outDir: "dist", // Директория, куда будут собраны файлы
   },
+  base: "/KrovatiDlyaGostinitsBatumi.github.io/",
 });
