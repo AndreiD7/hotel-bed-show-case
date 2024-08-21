@@ -1,10 +1,7 @@
-import config from "./config.js";
-
 let menu = document.querySelector("#menu");
 let navbar = document.querySelector(".navbar");
 
 menu.onclick = () => {
-  console.log("Menu clicked");
   menu.classList.toggle("fa-times");
   navbar.classList.toggle("active");
 };
@@ -32,14 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const scriptURL = config.apiURL;
+const ScriptURL = import.meta.env.VITE_GOOGLE_SHEETS_KEY;
 const form = document.forms["contact-form"];
 
 const sendText = document.getElementById("sendText");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+  fetch(ScriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       sendText.innerHTML =
         "Ваша заявка отправлена! Спасибо за обращение, мы скоро с вами свяжемся.";

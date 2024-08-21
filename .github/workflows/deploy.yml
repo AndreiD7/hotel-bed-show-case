@@ -3,18 +3,31 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # или другая ветка, которую вы используете
+      - main # Замените на вашу ветку, если нужно
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # так как ваш проект находится в корне, указываем текущую директорию
+          publish_dir: ./dist
+
+      - name: Inject API Key
+        run: echo "VITE_GOOGLE_SHEETS_KEY=${{ secrets.GOOGLE_SHEETS_KEY }}" >> .env

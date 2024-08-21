@@ -1,0 +1,25 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrovatiDlyaGostinitsBatumi/KrovatiDlyaGostinitsBatumi.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrovatiDlyaGostinitsBatumi/KrovatiDlyaGostinitsBatumi.github.io/issues"
+  },
+  "homepage": "https://github.com/KrovatiDlyaGostinitsBatumi/KrovatiDlyaGostinitsBatumi.github.io#readme",
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
