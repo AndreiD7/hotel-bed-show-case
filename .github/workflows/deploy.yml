@@ -49,6 +49,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Inject API Key
-        run: echo "VITE_GOOGLE_SHEETS_KEY=${{ secrets.GOOGLE_SHEETS_KEY }}" >> .env
