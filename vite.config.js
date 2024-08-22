@@ -1,9 +1,6 @@
-import { defineConfig } from "vite";
-
-export default defineConfig({
-  root: "./", // Директория с исходными файлами
+export default {
   build: {
-    outDir: "dist", // Директория, куда будут собраны файлы
+    outDir: "dist",
   },
-  base: "/KrovatiDlyaGostinitsBatumi.github.io/",
-});
+  base: "krovati-dlya-gostinits-batumi",
+};
