@@ -134,7 +134,7 @@ header .phone {
 
 header .navbar ul {
   display: flex;
-  gap: 7rem;
+  gap: 1.5rem;
 }
 
 header .navbar ul li a {
