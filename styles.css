@@ -56,9 +56,9 @@ h6 {
 & {
   --main-clr: #f5f5f5;
   --dark-clr: #8b7355;
-  --big-fz: clamp(25px, 4vw + 1rem, 45px);
-  --medium-fz: clamp(20px, 3vw + 1rem, 35px);
-  --small-fz: clamp(12px, 2vw + 0.5rem, 18px);
+  --big-fz: clamp(28px, 5vw + 1rem, 50px);
+  --medium-fz: clamp(18px, 3vw + 0.5rem, 32px);
+  --small-fz: clamp(14px, 2vw + 0.25rem, 20px);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
@@ -127,11 +127,11 @@ header .header-text {
 }
 
 header .header-text span {
-  font-size: var(--medium-fz);
+  font-size: var(--big-fz);
   color: #f7f1e3;
 }
 
-header .logo .subtitle {
+header .logo .header-text .subtitle {
   font-size: var(--small-fz);
   color: #f7f1e3;
 }
@@ -473,5 +473,28 @@ header #menu {
   header .fa-times {
     transform: rotate(90deg);
     transition: transform 0.3s ease;
+  }
+}
+
+@media (max-width: 576px) {
+  header .header-text span {
+    font-size: var(--medium-fz);
+  }
+
+  header .logo .header-text .subtitle {
+    font-size: var(--small-fz);
+  }
+
+  header .phone {
+    font-size: var(--small-fz);
+  }
+
+  header .navbar.active {
+    top: 8rem;
+  }
+
+  header .navbar ul {
+    flex-direction: column;
+    padding: 1rem;
   }
 }
