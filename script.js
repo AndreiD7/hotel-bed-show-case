@@ -6,6 +6,32 @@ menu.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+// Функция для открытия/закрытия меню
+menu.onclick = function () {
+  menu.classList.toggle("fa-times");
+  navbar.classList.toggle("active");
+};
+
+// Закрытие меню при клике на пункт меню
+document.querySelectorAll(".navbar ul li a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    if (navbar.classList.contains("active")) {
+      menu.classList.remove("fa-times");
+      navbar.classList.remove("active");
+    }
+  });
+});
+
+// Закрытие меню при клике вне его области
+document.addEventListener("click", function (event) {
+  if (!menu.contains(event.target) && !navbar.contains(event.target)) {
+    if (navbar.classList.contains("active")) {
+      menu.classList.remove("fa-times");
+      navbar.classList.remove("active");
+    }
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Открытие модального окна и установка значения product_id
   document.querySelectorAll(".modal-open").forEach((button) => {

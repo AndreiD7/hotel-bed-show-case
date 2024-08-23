@@ -427,6 +427,10 @@ header #menu {
     display: block;
   }
 
+  header .logo img {
+    display: none;
+  }
+
   header .navbar {
     position: fixed;
     left: 0;
