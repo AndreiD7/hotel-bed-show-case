@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const ScriptURL = process.env.VITE_GOOGLE_SHEETS_KEY;
+const ScriptURL = import.meta.env.VITE_GOOGLE_SHEETS_KEY;
 const form = document.forms["contact-form"];
 
 const sendText = document.getElementById("sendText");
