@@ -1,1 +1,1 @@
-# hotel-bed-show-case
+# hotel-bed-shop
